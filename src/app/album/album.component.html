@@ -1,0 +1,33 @@
+<button style="padding: 10px; margin: 10px 0 30px 0;" (click)="getTopList()">Get top List</button>
+
+
+<div class="row">
+    <div class="column">
+        <p>--------Total record------****-------------------</p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let key of resultAlbum">
+            <td>{{key.id}}</td>
+            <td>{{key.title}}</td>
+        </tr>
+    </tbody>
+</table>
+<p>------------End of--****-------------------</p>
+
+    </div>
+
+
+    <div class="column" *ngIf="topList">
+        <p> Limited record:</p>
+        <ul *ngFor="let key of resultAlbumLimit">
+            <li>{{key.id}}</li>
+            <li>{{key.title}}</li>
+            <li>{{key.id}}</li>
+        </ul>
+    </div>
+</div>
